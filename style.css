@@ -1,3 +1,12 @@
+/* Primary
+Bright orange: hsl(31, 77%, 52%) 
+Dark cyan: hsl(184, 100%, 22%) 
+Very dark cyan: hsl(179, 100%, 13%)
+
+Neutral
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75) 
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
+
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 *{
     /* font-family: 'Big Shoulders Display', cursive; */
@@ -10,4 +19,72 @@
 }
 body{
     font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 95%);
+}
+.container{
+    width: 920px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+}
+.container .card{
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .card:first-child{
+    background-color: hsl(31, 77%, 52%);
+}
+.container .card:nth-child(2){
+    background-color: hsl(184, 100%, 22%);
+}
+.container .card:last-child{
+    background-color: hsl(179, 100%, 13%);
+}
+.container .card .text{
+    margin-top: -80px;
+}
+.container .card h1{
+    font-family: 'Big Shoulders Display', cursive;
+    color: hsl(0, 0%, 95%);
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.container .card p{
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.6;
+}
+.container .link{
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 95%);
+    border: 1px solid hsl(0, 0%, 95%);
+    border-radius: 25px;
+    transition: 0.3s;
+}
+.container .link:hover{
+    background-color: transparent;
+    color: hsl(0, 0%, 95%) !important;
+}
+.container .card:nth-child(1) .link{
+    color: hsl(31, 77%, 52%);
+}
+.container .card:nth-child(2) .link{
+    color: hsl(184, 100%, 22%);
+}
+.container .card:nth-child(3) .link{
+    color: hsl(179, 100%, 13%);
 }
